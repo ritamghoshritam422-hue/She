@@ -1,43 +1,56 @@
 
-
-.paper {
-    padding: 100px 100px;
-}
-
 body {
-    height : 100vh;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('iimg/bg1.jpg') ;
-    background-size: 1000px;
+    background-image: url('iimg/bg1.jpg');
     background-position: center center;
+    background-size: cover;
+    overflow: hidden; 
 }
 
-.paper{
 
+.paper {
     position: absolute;
     background-image: url("iimg/paper1.jpg");
-    background-size: 500px;
+    background-size: cover; 
     background-position: center center;
-    padding: 20px 100px;
-    transform: rotateZ('-5deg');
+    
+    padding: 30px 40px; 
+    transform: rotateZ(-5deg); 
     box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+    
+   
+    touch-action: none; 
+    user-select: none;  
+    cursor: grab;
+    
+    
+    max-width: 85vw;
+    box-sizing: border-box;
 }
+
+.paper:active {
+    cursor: grabbing;
+}
+
 .paper.heart {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px; 
+    height: 150px;
     padding: 0;
     border-radius: 50%;
 }
+
 .paper.image {
     padding: 10px;
-    
 }
 
-.paper.text{
-    font-size: 28px;
+.paper.text {
+    font-size: clamp(18px, 5vw, 28px); 
 }
 
 .paper.heart::after {
@@ -47,31 +60,34 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-size: 150px;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     opacity: 0.6;
 }
 
 img {
-    max-height: 300px ;
-    width: 100%;
+    max-height: 250px;
+    max-width: 100%;
+    object-fit: contain;
     user-select: none;
+    pointer-events: none; 
 }
 
 p {
     color: rgb(0, 0, 100);
     opacity: 0.75;
     user-select: none;
+    pointer-events: none;
+    margin: 0;
 }
 
-.first{
-    
-    height: 300px;
-    width: 500px;
-}
-.first p{
-    font-size: 65px;
+.first {
+    width: auto; 
+    max-width: 90vw;
 }
 
-
+.first p {
+    font-size: clamp(35px, 10vw, 65px); 
+    text-align: center;
+}
