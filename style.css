@@ -1,0 +1,76 @@
+
+
+.paper {
+    padding: 100px 100px;
+}
+
+body {
+    height : 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('iimg/bg1.jpg') ;
+    background-position: center center;
+}
+
+.paper{
+
+    position: absolute;
+    background-image: url("iimg/paper1.jpg");
+    background-size: 500px;
+    background-position: center center;
+    padding: 20px 100px;
+    transform: rotateZ('-5deg');
+    box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.paper.heart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    border-radius: 50%;
+}
+.paper.image {
+    padding: 10px;
+    
+}
+
+.paper.text{
+    font-size: 28px;
+}
+
+.paper.heart::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+img {
+    max-height: 340px ;
+    width: 100%;
+    user-select: none;
+}
+
+p {
+    color: rgb(0, 0, 100);
+    opacity: 0.75;
+    user-select: none;
+}
+
+.first{
+    
+    height: 300px;
+    width: 500px;
+}
+.first p{
+    font-size: 65px;
+}
+
+
